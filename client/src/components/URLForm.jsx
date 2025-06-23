@@ -51,7 +51,6 @@ function URLForm() {
       console.log(data)
 
       if (response.ok) {
-        // Check if data.shortUrl exists, otherwise try to use data.short_url or data itself
         if (data.shortLink) {
             const shortLink = data.shortLink.replace("8000", "5173");
             setshortURL(shortLink);
