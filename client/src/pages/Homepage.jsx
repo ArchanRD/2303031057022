@@ -4,13 +4,12 @@ import URLForm from '../components/URLForm';
 import ShortURLBox from '../components/ShortURLBox';
 
 function HomePage() {
-  const [shortURL, setShortURL] = useState('');
 
   return (
     <div className="home-container">
       {/* <Header /> */}
-      <URLForm setShortURL={setShortURL} />
-      {shortURL && <ShortURLBox shortURL={shortURL} />}
+      <URLForm />
+    
     </div>
   );
 }
