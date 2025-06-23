@@ -1,11 +1,16 @@
 const express = require("express");
 const fs = require("fs");
 const path = require("path");
+const cors = require("cors");
 
 const app = express();
 app.use(express.json())
-
-const HOST = "http://localhost:3000";
+app.use(cors({
+  origin: '*',
+  methods: ['GET', 'POST', 'PUT', 'DELETE'],
+  allowedHeaders: ['Content-Type', 'Authorization']
+}));
+const HOST = "http://localhost:8000";
 const SHORTURLS_FILE = path.join(__dirname, "shorturls.json");
 
 function read() {
